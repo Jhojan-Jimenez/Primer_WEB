@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+:root{
+    --color-purple: #5500E1;
+    --color-sub-purple:#8C6EDB;
+    --color-white:#E0E3E3;
+    --color-black:#000;
+    
+}
+body{
+    height: 100vh;
+    background-color: var(--color-purple);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lato', sans-serif;
+}
+* a{
+    text-decoration: none;
+}
+* li{
+    list-style-type: none;
+}
+header{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--color-purple);
+    z-index: 10;
+}
+.log-in{
+    color: var(--color-black);
+    position: absolute;
+    right: 5%;
+}
+.log-in:hover{
+    transition: color 0.3s ease;
+    color: var(--color-white);
+}
+#login{
+    right: 20%;
+}
+#tittle{
+    position: absolute;
+    left: 25%;
+}
+main{
+    position: relative;
+    top: 5rem;
+}
+#main-menu{
+    box-sizing: border-box;
+    background-color: var(--color-purple);
+    position: fixed;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+    
+}
+#nav-menu{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    margin-bottom: 5rem;
+    justify-content: space-around;
+    width: 100%;
+}
+#main-content{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,400px));
+    grid-template-rows: repeat(auto-fit,minmax(300px,400px));
+    position: absolute;
+    background-color: var(--color-white);
+    right: 0px;
+    top: 0px;
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    
+}
+.menu{
+    text-align: center;
+    padding: 2rem 0px;
+}
+.menu:hover{
+    transition: background-color 0.3s ease;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    background-color: var(--color-white);
+}
+
+
+/* footer{
+    position: absolute;
+    text-align: center;
+    background-color: var(--color-purple);
+    margin-top: 5rem;
+    bottom: 0px;
+    width: 100%;
+    height: 5rem;
+ }  */
