@@ -32,6 +32,12 @@ header{
     min-height: 5rem;
     background-color: var(--color-purple);
 }
+#usuario{
+    position: absolute;
+    left: 45%;
+    width: 10%;
+    text-align: center;
+}
 .log-in{
     color: var(--color-black);
     position: absolute;
@@ -125,11 +131,23 @@ header{
     position: fixed;
     bottom: 10%;
     right: 5%;
-    width: 8vw;
-    height: 8vh;
-    background-color: red;
+    width: 5vw;
+    height: 5vw;
     border: 1px solid black;
     border-radius: 50%;
+    background-image: url('assets/icons/cart.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+}
+@media screen and  (max-width: 1000px){
+    #tittle{
+        left: 35px;
+    }
+    #btn_carrito{
+        width: 8vw;
+        height: 8vw;
+    }
 }
 
 

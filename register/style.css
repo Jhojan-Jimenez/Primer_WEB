@@ -51,18 +51,11 @@ body::before {
 #nombre, #correo, #apellidos,#contraseña{
     display: inline-block;
     box-sizing: border-box;
-    width: 50%;
+    width: 100%;
     height: 5vh;
     max-height: 50px;
     border-radius: 5%;
-    margin: 5%;
-}
-
-#abajo a{
-    text-decoration: none;
-    color: black;
-    font-size: 2vh;
-    float: left;
+    margin: 10%;
 }
 #register{
     padding: 10px 20px;
@@ -78,8 +71,17 @@ body::before {
         flex-wrap: wrap;
     }
 }
+#formulario_log{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
 
-#abajo{
+#login{
+    text-decoration: none;
+    color: black;
+    font-size: 2vh;
+    float: left;
     margin-top: 10%;
     display: flex;
     width: 100%;
@@ -88,5 +90,9 @@ body::before {
 }
 #login:hover{
     color: blue;
+}
+i{
+    width: 20px;
+    height: 20px;
 }
 
