@@ -90,10 +90,9 @@ header{
 } 
 
 #main-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,400px));
-    justify-content: center;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-left: 20%;
     background-color: var(--color-white); 
     border-top-left-radius: 2rem;
@@ -101,52 +100,22 @@ header{
 } 
 .producto{
     display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     border: 1px solid black;
-    width: 300px;
-    height: 500px;
+    width: 80%;
+    height: 200px;
     margin: 2rem 0px;
 } 
-.producto img{
-    margin: 10% 0px;
-    height: 60%;
-    width: 80%;
+.img-producto{
+    height: 80%;
 }
-.producto img:hover{
-    transform: scale(1.1);
-    box-shadow: 1px 1px 20px rgb(119, 112, 112);
-}
-.producto [type = "button"]{
-    margin-top: 5%;
-    border: 1px solid black;
-    border-radius: 2rem;
-}
-.producto [type = "button"]:hover{
-    background-color: #8C6EDB;
-    cursor: pointer;
-    
-}
-#btn_carrito{
-    position: fixed;
-    bottom: 10%;
-    right: 5%;
-    width: 5vw;
-    height: 5vw;
-    border: 1px solid black;
-    border-radius: 50%;
-    cursor: pointer;
-    
-}
+.pro
+
 @media screen and  (max-width: 1000px){
     #tittle{
         left: 35px;
-    }
-    #btn_carrito{
-        width: 8vw;
-        height: 8vw;
     }
 }
 
