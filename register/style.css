@@ -31,6 +31,8 @@ body::before {
     width: 50%;
     height: 100%;
     background-image: url('../assets/imgs/hoja.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
 
@@ -56,12 +58,15 @@ body::before {
     max-height: 50px;
     border-radius: 5%;
     margin: 10%;
+    padding-left: 3%;
 }
 #register{
+    border-radius: 10px;
+    margin-top: 10%;
     padding: 10px 20px;
 }
 #register:hover{
-    padding: 10px 20px;
+    background-image: linear-gradient(to right, orange, white);
 }
 
 @media screen and  (max-width: 1000px){
@@ -89,7 +94,7 @@ body::before {
     align-items: center;
 }
 #login:hover{
-    color: blue;
+    color: rgb(203, 136, 11);
 }
 i{
     width: 20px;

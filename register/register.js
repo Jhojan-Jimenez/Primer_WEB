@@ -18,13 +18,26 @@ const soloLetras = /^[a-zA-Z]+$/;
 function registrarUsuario(e){
     e.preventDefault();
     if (!(soloLetras.test(nombres.value) && soloLetras.test(apellidos.value))) {
-        alert('Solo ingrese letras en Nombres y Apellidos')
+        Swal.fire({
+            title: 'Error!',
+            text: 'Porfavor, solo ingresa letras en Nombres y Apellidos',
+            icon: 'error',
+            confirmButtonText: 'Ok'
+          })
     }else{
-        const nuevoUsuario = crearUsuario(nombres.value,apellidos.value,correo.value,contraseña.value)
-        usuarios.push(nuevoUsuario);
-        alert("Te has registrado Correctamente")
-        localStorage.setItem("Usuarios",JSON.stringify(usuarios))
-        window.location.href = '../index.html';
+        Swal.fire({
+            title: 'Excelente',
+            text: 'Te has registrado correctamente',
+            icon: 'success',
+            confirmButtonText: 'Continuar',
+        }).then((result) => {
+            const nuevoUsuario = crearUsuario(nombres.value,apellidos.value,correo.value,contraseña.value)
+            usuarios.push(nuevoUsuario);
+            
+            localStorage.setItem("Usuarios",JSON.stringify(usuarios))
+            window.location.href = '../index.html';
+          });
+        
     }
 }
 function crearUsuario(nombres, apellidos, correo, contraseña) {
