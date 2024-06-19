@@ -121,7 +121,9 @@ function productosFiltrados(productos, tipo) {
     return productos.filter(producto => producto.tipo === tipo);
 }
 const btn_carrito = document.querySelector('#btn_carrito')
-btn_carrito.addEventListener('click',()=>window.location.href = "carrito.html")
+btn_carrito.addEventListener('click',()=>window.location.href = "carrito/carrito.html")
+
+
 
 
 let productosEnCarrito = JSON.parse(localStorage.getItem("productosEnCarrito"))
@@ -129,6 +131,17 @@ let productosEnCarrito = JSON.parse(localStorage.getItem("productosEnCarrito"))
 
 
 function agregarAlCarrito(e){
+    Toastify({
+        text: "Producto Agregado",
+        duration: 1000,
+        close: true,
+        gravity: "top", 
+        position: "right", 
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
     const idBoton = e.currentTarget.id;
     const productoAgregado = Productos.find((producto)=>producto.id ==idBoton)
     if(productosEnCarrito==null){
